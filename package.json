@@ -1,0 +1,17 @@
+{
+  "name": "DCC2014.1-ExpressJsForMvc",
+  "version": "0.0.1",
+  "description": "Sample Express application replicating ASP.NET MVC structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "asp.net",
+    "mvc",
+    "express",
+    "sample"
+  ],
+  "author": "Joe Modjeski <joe@modjeski.net>",
+  "license": "MIT"
+}
