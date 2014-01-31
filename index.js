@@ -7,6 +7,9 @@ var app = express();
 if(webConfig.webServer.logging)
   app.use(express.logger(webConfig.webServer.logging));
 
+app.use('/content', express.static(__dirname + "/Content"));
+app.use('/scripts', express.static(__dirname + "/Scripts"));
+
 // spin up the server
 var server = http.createServer(app);
 server.listen(webConfig.webServer.port, function(e){
