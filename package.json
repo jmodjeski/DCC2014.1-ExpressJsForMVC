@@ -13,5 +13,10 @@
     "sample"
   ],
   "author": "Joe Modjeski <joe@modjeski.net>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "~3.4.8",
+    "connect": "~2.12.0",
+    "jade": "~1.1.5"
+  }
 }
