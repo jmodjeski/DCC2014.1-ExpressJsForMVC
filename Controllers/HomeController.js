@@ -7,5 +7,5 @@ var exports = module.exports = function initialize(app){
 
 
 function Index(req, res, next){
-  res.end("Hello!");
+  res.render("Home/index");
 };

@@ -5,6 +5,8 @@ var http = require('http'),
 
 var app = express();
 
+app.set("view engine", "jade");
+
 if(webConfig.webServer.logging)
   app.use(express.logger(webConfig.webServer.logging));
 

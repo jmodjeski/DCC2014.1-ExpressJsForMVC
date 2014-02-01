@@ -1,0 +1,14 @@
+extends ../layout
+
+block body
+  h1  Hello 
+    span#name anonymous
+
+block scripts
+  script.
+    $(document).ready(function(){
+      setTimeout(function(){
+      var name = prompt('Whats your name?');
+      $('#name').text(name);
+      }, 1000);
+    });
