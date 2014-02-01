@@ -1,6 +1,7 @@
 var http = require('http'),
   express = require('express'),
-  webConfig = require('./web.config');
+  webConfig = require('./web.config'),
+  controllers = require('./Controllers');
 
 var app = express();
 
@@ -9,6 +10,9 @@ if(webConfig.webServer.logging)
 
 app.use('/content', express.static(__dirname + "/Content"));
 app.use('/scripts', express.static(__dirname + "/Scripts"));
+
+// wireup controllers
+controllers(app);
 
 // spin up the server
 var server = http.createServer(app);
