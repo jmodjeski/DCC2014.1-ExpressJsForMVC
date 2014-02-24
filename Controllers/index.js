@@ -1,6 +1,7 @@
 
 var controllers = [
   require("./HomeController"),
+  require("./SignupController")
 ];
 
 
