@@ -2,6 +2,29 @@ extends ../layout
 
 block body
   h1  Signup
+  form(method="POST")
+    fieldset
+      legend Create Account
+      section
+        label Email Address
+        input(type="email"
+          name="email"
+          value="")
+      section
+        label Username
+        input(type="text"
+          name="username"
+          value="")
+      section
+        label Password
+        input(type="password"
+          name="password")
+      section
+        label Confirm
+        input(type="password"
+          name="confirmPassword")
+    button Create Account
+
 
 block scripts
   script.

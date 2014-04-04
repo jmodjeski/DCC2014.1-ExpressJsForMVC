@@ -1,6 +1,8 @@
 
 var exports = module.exports = function initialize(app){
 
+  
+
   app.get('/signup', Index);
   app.post('/signup', Create);
 };
