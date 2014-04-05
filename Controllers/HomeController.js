@@ -1,8 +1,11 @@
 
-var exports = module.exports = function initialize(app){
+var exports = module.exports = {
+  setup: function(app){
 
-  app.get('/', Index);
-
+  },
+  initialize: function initialize(app){
+    app.get('/', Index);
+  }
 };
 
 

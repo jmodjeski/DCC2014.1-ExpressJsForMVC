@@ -10,6 +10,8 @@ app.set("view engine", "jade");
 if(webConfig.webServer.logging)
   app.use(express.logger(webConfig.webServer.logging));
 
+app.use(express.bodyParser());
+
 app.use('/content', express.static(__dirname + "/Content"));
 app.use('/scripts', express.static(__dirname + "/Scripts"));
 
