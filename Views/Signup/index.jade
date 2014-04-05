@@ -1,30 +1,39 @@
 extends ../layout
 
 block body
-  h1  Signup
+
+  - if(errorMessage)
+    .validation-summary-errors #{errorMessage}
+
   form(method="POST")
-    fieldset
-      legend Create Account
-      section
-        label Email Address
+    fieldset.signup
+
+      legend Signup
+
+      .email.editor-field
+        label.editor-label Email
         input(type="email"
           name="email"
-          value="")
-      section
-        label Username
-        input(type="text"
-          name="username"
-          value="")
-      section
-        label Password
+          value="#{email}")
+
+      .email.confirm.editor-field
+        label.editor-label Confirm Email
+        input(type="email"
+          name="confirmEmail"
+          value="#{confirmEmail}")
+
+      .password.editor-field
+        label.editor-label Password
         input(type="password"
           name="password")
-      section
-        label Confirm
+
+      .password.confirm.editor-field
+        label.editor-label Confirm Password
         input(type="password"
           name="confirmPassword")
-    button Create Account
 
+    input(type="submit"
+      value="Submit")
 
 block scripts
   script.
