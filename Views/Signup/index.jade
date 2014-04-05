@@ -1,7 +1,41 @@
 extends ../layout
 
 block body
-  h1  Signup
+
+  - if(errorMessage)
+    .validation-summary-errors #{errorMessage}
+
+
+  form(method="POST")
+    fieldset.signup
+
+      legend Signup
+
+      .email.editor-field
+        label.editor-label Email
+        input(type="email"
+          name="email"
+          value="#{email}")
+
+      .email.confirm.editor-field
+        label.editor-label Confirm Email
+        input(type="email"
+          name="confirmEmail"
+          value="#{confirmEmail}")
+
+      .password.editor-field
+        label.editor-label Password
+        input(type="password"
+          name="password")
+
+      .password.confirm.editor-field
+        label.editor-label Confirm Password
+        input(type="password"
+          name="confirmPassword")
+
+    input(type="submit"
+      value="Submit")
+
 
 block scripts
   script.

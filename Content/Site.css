@@ -59,3 +59,10 @@ textarea {
 .validation-summary-valid {
     display: none;
 }
+
+/* styles for signup
+-----------------------------------------------------------*/
+fieldset.signup LABEL {
+    width: 150px;
+    display: inline-block;
+}
